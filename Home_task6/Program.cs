@@ -1,9 +1,9 @@
 ﻿bool Even_number (int num)
 {
-    bool number=true;
-    int result = num % 2;
-    if (result > 0) number=false ; 
-    return number;
+    bool result=true;
+    int number = num % 2;
+    if (number > 0) result=false ; 
+    return result;
         
 }
 
