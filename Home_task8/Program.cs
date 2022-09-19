@@ -10,7 +10,7 @@ int num1 = 0;
 int num2 = 1;
 while (num1 <= 0)
 {
-    Console.Write("Enter a positive number : ");
+    Console.Write("Enter a Positive and NOT ZERO number  : ");
     num1 = Convert.ToInt32(Console.ReadLine());
 
         while (num2 <= num1)
