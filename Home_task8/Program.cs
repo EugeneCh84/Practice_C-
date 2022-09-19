@@ -1,7 +1,7 @@
 ﻿bool Even_number (int num)
 {
     bool result=true;
-    int number = num % 2;
+    int number = Math.Abs(num % 2);
     if (number > 0) {result=false;}     
     return result;
         
@@ -23,7 +23,3 @@ while (num1 <= 0)
             num2++;
         }
 }
-
-
-//}
-//else Console.Write("Enter a positive number: ");
