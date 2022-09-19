@@ -2,16 +2,28 @@
 {
     bool result=true;
     int number = num % 2;
-    if (number > 0) result=false ; 
+    if (number > 0) {result=false;}     
     return result;
         
 }
-Console.Write("Enter a number: ");
-int num = Convert.ToInt32(Console.ReadLine());
-int num1 = 1;
-while (num1 <= num)
+int num1 = 0;
+int num2 = 1;
+while (num1 <= 0)
 {
-    bool num2 = Even_number(num1);
-    if (num2) Console.Write($"{num1}  ");
-    num1++;
-} 
+    Console.Write("Enter a positive number: ");
+    num1 = Convert.ToInt32(Console.ReadLine());
+
+        while (num2 <= num1)
+        {
+            bool num3 = Even_number(num2);
+            if (num3) 
+            {
+                Console.WriteLine(num2);
+            }
+            num2++;
+        }
+}
+
+
+//}
+//else Console.Write("Enter a positive number: ");
