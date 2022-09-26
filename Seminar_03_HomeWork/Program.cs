@@ -78,4 +78,4 @@ void Exponentiation()
         Console.WriteLine($"|{result}|");
     }
 } 
-Exponentiation();
+//Exponentiation();
