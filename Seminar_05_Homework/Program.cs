@@ -73,8 +73,7 @@ void Summ_of_UnEvenIndex_Numbers()
 
 
 
-//   Task #38   я не смог решить задачу используя методы Find_Max и Find_Min
-//              не понял как это реализовать.
+//   Task #38   
 
 
 void Diff_Max_Min_array()
@@ -83,36 +82,17 @@ void Diff_Max_Min_array()
     int array_length = Convert.ToInt32(Console.ReadLine());
     double[] my_array1 = new double[array_length]; 
     Fill_array_double (my_array1);
-    // Find_Max(my_array1,max);
-    // Find_Min(my_array1,min);
+    Find_Max(my_array1);
+    Find_Min(my_array1);
         
-    double max = my_array1[0];
-    for (int i = 1; i < my_array1.Length; i++ )
-        {
-            if (my_array1[i] > max) 
-                {
-                    max = my_array1[i];
-                }
-        }
-         Console.WriteLine($"Max value of array  {max}");
-        Console.WriteLine();
-
-    double min = my_array1[0];
-    for (int i = 1; i < my_array1.Length; i++ )
-        {
-            if (my_array1[i] < min) 
-                {
-                    min = my_array1[i];
-                }
-        }
-
-    Console.WriteLine($"Min value of array  {min}");
+    Console.WriteLine($"Max value of array  {Find_Max(my_array1)}");
+    Console.WriteLine();
+    Console.WriteLine($"Min value of array  {Find_Min(my_array1)}");
     Console.WriteLine();
 
-    double result = max - min;
+    double result = Find_Max(my_array1) - Find_Min(my_array1);
         
     Console.WriteLine($"Diff between max & min   {result}");
-    
 }
 Diff_Max_Min_array();
 
@@ -130,12 +110,13 @@ void Fill_array_double (double[] my_array1)
             Console.Write(my_array1[i] + "   ");
         }
         Console.WriteLine();
+        Console.WriteLine();
 }
-//Fill_array_double();
 
-void Find_Max(double[] my_array1, double max)
+
+double Find_Max(double[] my_array1)
 {   
-    max = my_array1[0];
+    double max = my_array1[0];
     for (int i = 1; i < my_array1.Length; i++ )
     {
         if (my_array1[i] > max) 
@@ -143,16 +124,13 @@ void Find_Max(double[] my_array1, double max)
             max = my_array1[i];
         }
     }
-    // Console.WriteLine($"Max number of array     {max}");
-    // Console.WriteLine();
-    //return (max);
-    
+    return max;       
 }
 
 
-void Find_Min(double[] my_array1, double min)
+double Find_Min(double[] my_array1)
 {   
-    min = my_array1[0];
+    double min = my_array1[0];
     for (int i = 1; i < my_array1.Length; i++ )
     {
         if (my_array1[i] < min) 
@@ -160,7 +138,5 @@ void Find_Min(double[] my_array1, double min)
             min = my_array1[i];
         }
     }
-    // Console.WriteLine(min);
-    // Console.WriteLine();
-    //return (min);
+    return min;    
 }  
